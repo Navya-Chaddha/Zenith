@@ -12,10 +12,10 @@ export default async function AuthorPage() {
 
   if (!user) redirect("/auth/login")
 
+  // V1: Founder is the sole author — show all blogs
   const { data: blogs } = await supabase
     .from("blogs")
     .select("*")
-    .eq("author_id", user.id)
     .order("created_at", { ascending: false })
 
   return (

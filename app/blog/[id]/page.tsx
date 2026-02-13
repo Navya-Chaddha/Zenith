@@ -42,7 +42,8 @@ export default async function BlogPage({ params }: { params: Promise<{ id: strin
     }
   }
 
-  const isAuthor = user?.id === blog.author_id
+  // V1: Founder is the sole author — any logged-in user is the author
+  const isAuthor = !!user
 
   return (
     <div className="min-h-svh">
