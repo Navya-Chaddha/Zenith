@@ -13,8 +13,11 @@ export default function SignUpSuccessPage() {
         </div>
         <div className="rounded-2xl border border-border/60 bg-card/80 backdrop-blur-xl p-6 md:p-8">
           <h2 className="text-xl font-semibold text-foreground mb-2">Check your email</h2>
-          <p className="text-sm text-muted-foreground mb-6">
-            {"We've sent you a confirmation link. Please check your inbox and verify your email to continue your journey with ZENITH."}
+          <p className="text-sm text-muted-foreground mb-3">
+            {"We've sent you a confirmation link. Please check your inbox (and spam folder) and click the link to verify your email."}
+          </p>
+          <p className="text-xs text-muted-foreground/70 mb-6">
+            {"If you don't receive the email within a few minutes, go back to login and try signing in -- some Supabase configurations allow immediate access."}
           </p>
           <Button asChild className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
             <Link href="/auth/login">
