@@ -1,15 +1,27 @@
-import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import type { Metadata, Viewport } from "next"
+import { Space_Grotesk, JetBrains_Mono } from "next/font/google"
+import "./globals.css"
 
-import './globals.css'
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-sans",
+})
 
-const _geist = Geist({ subsets: ['latin'] })
-const _geistMono = Geist_Mono({ subsets: ['latin'] })
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+})
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
+  title: "ZENITH | Space Venture",
+  description:
+    "Explore the cosmos through stories, insights, and discoveries. ZENITH is your gateway to the universe.",
+}
+
+export const viewport: Viewport = {
+  themeColor: "#0a0e1a",
+  width: "device-width",
+  initialScale: 1,
 }
 
 export default function RootLayout({
@@ -18,8 +30,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className="font-sans antialiased">{children}</body>
+    <html lang="en" className="dark" suppressHydrationWarning>
+      <body
+        className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} font-sans antialiased`}
+        suppressHydrationWarning
+      >
+        {children}
+      </body>
     </html>
   )
 }

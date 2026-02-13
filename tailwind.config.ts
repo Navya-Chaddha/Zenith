@@ -61,6 +61,7 @@ const config: Config = {
           border: 'hsl(var(--sidebar-border))',
           ring: 'hsl(var(--sidebar-ring))',
         },
+        glow: 'hsl(var(--glow))',
       },
       borderRadius: {
         lg: 'var(--radius)',
