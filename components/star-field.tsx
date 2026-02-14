@@ -1,5 +1,6 @@
-"use client"
 
+<<<<<<< HEAD
+=======
 import { useEffect, useRef } from "react"
 
 export function StarField() {
@@ -90,5 +91,7 @@ export function StarField() {
       style={{ zIndex: 0 }}
       aria-hidden="true"
     />
-  )
+  )X
 }
+
+>>>>>>> 7a3649e6d6300766ab9c94b6dcb9ba889ca855d6

@@ -1,9 +1,13 @@
-// middleware.ts
-import { updateSession } from '@/lib/supabase/middleware'
+import 
+{ 
+  updateSession 
+} 
+from '@/lib/supabase/middleware'
 import { type NextRequest } from 'next/server'
 
-// Changed from 'proxy' to 'middleware'
-export async function middleware(request: NextRequest) {
+// Change this to a default export
+export default async function proxy(request: NextRequest) 
+{
   return await updateSession(request)
 }
 
